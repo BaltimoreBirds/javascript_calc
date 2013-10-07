@@ -8,18 +8,18 @@ function guessColor(actualResult, userGuess){
 };
 
 function addNumbers(firstNumber, secondNumber){
-  return firstNumber + secondNumber;
+  return firstNumber+secondNumber;
 };
 
 function subtractNumbers(firstNumber, secondNumber){
-  return firstNumber - secondNumber;
+  return firstNumber-secondNumber;
 };
 
 function  multiplyNumbers(firstNumber, secondNumber){
-  return firstNumber * secondNumber;
+  return firstNumber*secondNumber;
 };
 function divideNumbers(firstNumber, secondNumber){
-  return firstNumber / secondNumber;
+  return firstNumber/secondNumber;
 };
 function performOp(firstNumber, secondNumber, operation){
   var opMap = {
@@ -28,7 +28,7 @@ function performOp(firstNumber, secondNumber, operation){
     "x": multiplyNumbers,
     "/": divideNumbers
   }
-  return opMap[operation](firstNumber, secondNumber)
+  return opMap[operation](firstNumber, secondNumber);
 };
 
 $('#calculator input[type="submit"]').on('click', function(e){
@@ -37,7 +37,6 @@ $('#calculator input[type="submit"]').on('click', function(e){
   var firstNumber = $('#first-number').val();
   var secondNumber = $('#second-number').val();
   var userGuess = $('#user-guess').val();
-
 
   var $errorDiv = $('div.errors');
   var $resultEl = $('#result');
@@ -53,9 +52,8 @@ $('#calculator input[type="submit"]').on('click', function(e){
     var result = performOp(firstNumber, secondNumber, $(e.currentTarget).val());
 
 
-    $resultEl.html("the sum is: " + (result));
+    $resultEl.html("the sum is: " + result);
     if(userGuess === result){
-      $guessResult.css({"background-color": 'green'});
       $guessResult.html(userGuess + ' is Right!').css(
         {'background-color': guessColor(result,userGuess)});
     }

@@ -1,15 +1,17 @@
 function guessColor(actualResult, userGuess){
   if(actualResult === userGuess){
-    return 'green'
+    return 'green';
   }
   else{
-    return 'red'
+    return 'red';
   }
 };
 
 
-$('#calculator').on('submit', function(e){
+$('#calculator input[type="submit"]').on('click', function(e){
   e.preventDefault();
+
+  debugger;
 
   var firstNumber = $('#first-number').val();
   var secondNumber = $('#second-number').val();

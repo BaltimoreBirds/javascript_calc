@@ -24,7 +24,9 @@ function divideNumbers(firstNumber, secondNumber){
 function performOp(firstNumber, secondNumber, operation){
   var opMap = {
     "+": addNumbers,
-    "-": subtractNumbers
+    "-": subtractNumbers,
+    "x": multiplyNumbers,
+    "/": divideNumbers
   }
   return opMap[operation](firstNumber, secondNumber)
 };

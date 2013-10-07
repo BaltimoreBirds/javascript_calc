@@ -22,8 +22,8 @@ function divideNumbers(firstNumber, secondNumber){
   return firstNumber / secondNumber;
 };
 function performOp(firstNumber, secondNumber, operation){
-  var opMap= {
-    "+": addNumbers
+  var opMap = {
+    "+": addNumbers,
     "-": subtractNumbers
   }
   return opMap[operation](firstNumber, secondNumber)
@@ -31,8 +31,6 @@ function performOp(firstNumber, secondNumber, operation){
 
 $('#calculator input[type="submit"]').on('click', function(e){
   e.preventDefault();
-
-  debugger;
 
   var firstNumber = $('#first-number').val();
   var secondNumber = $('#second-number').val();
